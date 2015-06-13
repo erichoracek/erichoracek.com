@@ -1,5 +1,4 @@
 class Repos
-
   def self.set_repo_names(repo_names=[])
     @@repo_names = repo_names
   end
