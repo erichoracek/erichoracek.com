@@ -1,0 +1,14 @@
+{
+  "name":"erichoracek.com",
+  "scripts":{},
+  "env":{
+    "GITHUB_PASSWORD":{
+      "required":true
+    }
+  },
+  "addons":[
+    "newrelic",
+    "scheduler",
+    "memcachier"
+  ]
+}
