@@ -1,0 +1,365 @@
+@import "bourbon/addons/retina-image"
+
+// Name, App Color, Foreground Text Color, Link Color, Hero Background Color
+$apps: mapquest #84db5b #202020 darken(#84db5b, 15%) "light", stanley #A10000 #FFFFFF #A10000 "dark", mapquest-travel-blogs #8EC64A #202020 darken(#8EC64A, 15%) "dark", erudio #9E1D23 #FFFFFF #9E1D23 "light", growlvoice #426ED0 #FFFFFF #426ED0 "light"
+
+// Name, Color
+$contacts: email #383838, facebook #3B5998, dribbble #EA4C89, instagram #3f729B, github lighten(#171515, 15%), twitter #00ACEE
+
+@mixin colored-token($token-color: #999999, $text-color: #FFFFFF)
+  p
+    color: $text-color
+    background-color: $token-color
+    padding: 5px 0
+    font-weight: 500
+
+@mixin colored-popover-hover($token-color: #AAAAAA, $text-color: #FFFFFF)
+  color: $text-color
+  background-color: $token-color
+
+@mixin top-bottom-inner-shadow ($shadow-size: 5px, $shadow-color: #4294f0)
+  $top-shadow-size: $shadow-size
+  $bottom-shadow-size: -($shadow-size)
+  $shadow-blur: $shadow-size
+  $shadow-spread: -($shadow-size)
+  box-shadow: 0px $top-shadow-size $shadow-blur $shadow-spread $shadow-color inset, 0px $bottom-shadow-size $shadow-blur $shadow-spread $shadow-color inset
+
+@mixin hero-background-style($style: "dark")
+  @if $style == "dark"
+    background-color: #202020
+    // @include retina-image("/assets/images/hero-background-dark", 1088px 650px)
+    @include top-bottom-inner-shadow(30px, hsla(0, 0%, 0%, 1.0))
+  @else if $style == "light"
+    // background-color: #E0E0E0
+    background-color: #E5E5E5
+    // @include retina-image("/assets/images/hero-background-light", 1088px 650px)
+    @include top-bottom-inner-shadow(30px, hsla(0, 0%, 0%, 0.5))
+
+.navigation
+  @include span-columns(10)
+  @include shift(1)
+  margin-top: 80px
+  margin-bottom: 60px
+  > ul 
+    padding-left: 0
+    margin: 0 0
+    > li
+      font-size: 20px
+      @include span-columns(4)
+      text-align: center
+      list-style: none
+      line-height: 1
+      a
+        // color: inherit
+        font-size: 20px
+
+  @include media(max-width $phone)
+    margin-top: 40px
+    margin-bottom: 50px
+    > ul
+      > li
+        margin-bottom: 24px
+        @include span-columns(12)
+        @include omega()
+      > li:last-child
+        margin-bottom: 0px
+
+  @each $app in $apps
+    #nav-#{nth($app, 1)}.navigation-link
+      &:hover
+        @include colored-popover-hover(nth($app, 2), nth($app, 3))
+  @each $contact in $contacts
+    #nav-#{nth($contact, 1)}.navigation-link
+      &:hover
+        @include colored-popover-hover(nth($contact, 2), white)
+
+.header
+  @include span-columns(10)
+  @include shift(1)
+  @include omega()
+  margin-bottom: 120px
+  p
+    font-size: 40px
+    text-align: left
+    margin: 20 0px
+
+  @include media(max-width $tablet)
+    p
+      font-size: 34px
+
+  @include media(max-width $phone)
+    margin-bottom: 60px
+    p
+      font-size: 23px
+
+#works
+  @include span-columns(12)
+  overflow: auto
+
+.work
+  @include span-columns(12)
+  background-repeat: no-repeat
+  background-position: bottom
+  overflow: auto
+
+.title
+  @include span-columns(6)
+  @include shift(1)
+  margin-top: 2%
+  img
+    width: 100%
+    height: 100%
+
+@include media(max-width $tablet)
+  .title
+    margin-top: 0.5%
+    @include span-columns(7)
+
+@include media(max-width $phone)
+  .title
+    margin-top: none
+    margin-bottom: 14%
+    @include span-columns(10)
+    @include shift(1)
+    @include omega()  
+
+.icon
+  @include span-columns(3)
+  @include shift(1)
+  img
+    width: 100%
+    height: 100%
+
+@include media(max-width $tablet)
+  .icon
+    @include shift(0)
+    @include span-columns(3)
+
+@include media(max-width $phone)
+  .icon
+    @include span-columns(8)
+    @include shift(2)
+
+.hero
+  @include span-columns(12)
+  @include omega()
+  padding-top: 100px
+  overflow: hidden
+  background-size: 1088px 650px
+  background-position: bottom
+  background-repeat: no-repeat
+
+@include media(max-width $phone)
+  .hero
+    padding-top: 60px
+    padding-bottom: 30px
+
+.swipe
+  @include span-columns(12)
+
+.screenshot-iphone
+  margin: 40px auto 40px
+  img
+    max-width: 100%
+    height: auto
+    width: 440px
+
+.screenshot-mac
+  margin: 40px auto 0
+  img
+    max-width: 100%
+    height: auto
+    width: 1088px
+
+@each $app in $apps
+  ##{nth($app, 1)}.work
+    a, a:active, a:visited
+      color: nth($app, 4)
+    .hero
+      @include hero-background-style(nth($app, 5))
+    .skills
+      @include colored-token(nth($app, 2), nth($app, 3))
+
+.about
+  @include span-columns(12)
+  @include omega()
+  font-size: 23px
+  overflow: auto
+  margin: 40px 0 120px
+  ul
+    padding-left: 0
+  > ul > li.block:nth-child(1)
+    @include shift(2)
+
+  @include media(max-width $phone)
+    font-size: 17px
+    margin: 20px 0 40px
+    > ul > li.block:nth-child(1)
+      @include shift(1)
+
+  .description, .skills, .credit, .features, .credit, .accolades
+    text-align: left
+    @include span-columns(8)
+    @include shift(2)
+
+    @include media(max-width $phone)
+      @include span-columns(10)
+      @include shift(1)
+
+  .skills
+    margin-bottom: 14px
+    font-size: 23px
+    p
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      margin-top: 0px
+      margin-bottom: 15px
+      padding: 4px 0px
+      text-align: center
+      border-radius: 8px
+    @include media(max-width $phone)
+      font-size: 20px
+
+  li.block
+    text-align: left
+    li
+      list-style: none
+    li:before
+      margin-right: 20px
+      font-size: 20px
+      content: "•"
+      vertical-align: 5%
+
+    @include media(min-width $tablet)
+      @include span-columns(4)
+      @include omega(3n)
+
+    @include media(max-width $tablet min-width $phone)
+      @include span-columns(6)
+      @include omega(2n)
+      li:before
+        font-size: 17px
+        margin-right: 16px
+
+    @include media(max-width $phone)
+      @include span-columns(10)
+      @include shift(1)
+
+  .footnote
+    margin-top: 40px
+    font-size: 15px
+    text-align: left
+    @include span-columns(6)
+    @include shift(3)
+    position: relative
+
+  @include media(max-width $phone)
+    .footnote
+      font-size: 12px
+      @include span-columns(10)
+      @include shift(1)
+
+  .footnote:before
+    content: ""
+    width: 70%
+    left: 15%
+    top: -20px
+    height: 1px
+    background-color: #bbb
+    position: absolute
+
+  @include media(max-width $phone)
+    .footnote:before
+      width: 80%
+      left: 10%
+
+#libraries
+  @include span-columns(12)
+  @include hero-background-style("light")
+  overflow: auto
+  background-position: bottom
+  background-repeat: no-repeat
+  padding: 100px 0px 160px
+
+  @include media(max-width $phone)
+    padding: 20px 0px
+
+  .header
+    margin-bottom: 80px
+    p
+      margin: 20 0px
+
+    @include media(max-width $tablet)
+      margin-bottom: 60px
+
+    @include media(max-width $phone)
+      margin-bottom: 20px
+
+.library
+  font-size: 23px
+  text-align: left
+  @include span-columns(8)
+  @include shift(2)
+
+  @include media(max-width $phone)
+    @include span-columns(10)
+    @include shift(1)
+    font-size: 20px
+
+  i
+    font-size: 20px
+    @include span-columns(7)
+    text-align: right
+    margin-top: 27px
+
+    @include media(max-width $phone)
+      @include span-columns(3)
+      margin-top: 20px
+
+  .name
+    @include span-columns(8)
+    padding-top: 24px
+    a
+      word-wrap: break-word
+    
+    @include media(max-width $phone)
+      text-align: center
+      @include span-columns(12)
+
+  .stargazers, .forks
+    @include span-columns(2)
+    text-align: right
+
+    @include media(max-width $phone)
+      @include span-columns(4)
+      text-align: left
+
+    p
+      @include shift(1)
+      @include span-columns(4)
+      @include omega()
+
+  @include media(max-width $phone)
+    .stargazers
+      @include shift(3)
+
+  .forks
+    @include omega()
+
+  .description
+    font-size: 20px
+    @include span-columns(12)
+
+    @include media(max-width $phone)
+      font-size: 17px
+
+.footer
+  height: 150px
+  p
+    font-size: 20px
+    color: #888
+    line-height: 150px
+
+    @include media(max-width $phone)
+      font-size: 17px

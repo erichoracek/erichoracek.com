@@ -1,0 +1,15 @@
+# OSX Noise
+.DS_Store
+profile
+
+# SASS
+.sass-cache/*
+
+# Temp Files
+tmp/*
+log/*
+.powenv
+
+# Bundler
+vendor/
+bin/

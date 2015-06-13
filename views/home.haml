@@ -1,0 +1,225 @@
+.container
+  .navigation
+    %ul
+      %li
+        .dropdown
+          %a{ id:'nav-apps', 'data-toggle' => 'dropdown', href:'#' } Apps
+          %ul.dropdown-menu
+            %li
+              %a.navigation-link{ id:'nav-mapquest', href: '#mapquest' } MapQuest
+            %li
+              %a.navigation-link{ id:'nav-stanley', href: '#stanley' } Stanley Film Fest
+            %li
+              %a.navigation-link{ id:'nav-mapquest-travel-blogs', href: '#mapquest-travel-blogs' } MapQuest Travel Blogs
+            %li
+              %a.navigation-link{ id:'nav-erudio', href: '#erudio' } Erudio
+            %li
+              %a.navigation-link{ id:'nav-growlvoice', href: '#growlvoice' } GrowlVoice
+      %li
+        %a{ id:'nav-libraries', href: '#libraries'} Libraries
+      %li
+        .dropdown
+          %a{ id:'nav-contact', 'data-toggle' => 'dropdown', href:'#' } Contact
+          %ul.dropdown-menu
+            %li
+              %a.navigation-link{ id:'nav-email', href: 'mailto:horacek.eric@gmail.com' } Email
+            %li
+              %a.navigation-link{ id:'nav-dribbble', href: '//dribbble.com/erichoracek', target:'_blank' } Dribbble
+            %li
+              %a.navigation-link{ id:'nav-github', href: '//github.com/erichoracek', target:'_blank' } Github
+            %li
+              %a.navigation-link{ id:'nav-twitter', href: '//twitter.com/erichoracek', target:'_blank' } Twitter
+            %li
+              %a.navigation-link{ id:'nav-instagram', href: '//instagram.com/fraskydango', target:'_blank' } Instagram
+            %li
+              %a.navigation-link{ id:'nav-facebook', href: '//facebook.com/erichoracek', target:'_blank' } Facebook
+
+  .header
+    %p= "Hi, I'm Eric Horacek."
+    %p= "I'm a developer, designer, and product manager that crafts experiences for mobile, desktop, and web."
+    %p= "Feel free to browse through the <a class='nav-apps-link' href='#'>apps</a> that I've been a part of, view the open source <a href='#libraries'>libraries</a> that I've released, or <a class='nav-contact-link' href='#'>contact me</a> if you'd like to get in touch."
+#works
+
+  #mapquest.work
+    .hero
+      .container
+        .title
+          %img{ src: '/assets/images/title-mapquest.png' }
+        .icon
+          %img{ src: '/assets/images/icon-mapquest.png' }
+        #mapquest-slider.swipe
+          .swipe-wrap
+            %div
+              .screenshot-iphone
+                %img{ src: '/assets/images/iphone-mapquest-1.png' }
+    .container
+      .about
+        .skills
+          %ul
+            %li.block
+              %p Product
+            %li.block
+              %p Management
+            %li.block
+              %p Development
+        .description
+          %p= "MapQuest is your new favorite turn-by-turn navigation app from the company that started the online mapping revolution. Whether you’re taking a short trip across town or a road trip across the country, MapQuest has the trusted directions you need for stress-free navigation."
+        .features
+          %p= "You can find the MapQuest app on <a href='https://itunes.apple.com/app/mapquest-maps-gps-voice-navigation/id316126557?mt=8' target='_blank'>the App Store</a> and <a href='https://play.google.com/store/apps/details?id=com.mapquest.android.ace' target='_blank'>the Play Store</a>. You can learn more about the MapQuest app on <a href='http://mobile.mapquest.com/' target='_blank'>its official site</a>, <a href='http://www.wired.com/gadgetlab/2013/11/mapquest-new-apps/' target='_blank'>Wired</a>, <a href='http://www.wired.com/gadgetlab/2013/11/mapquest-new-apps/' target='_blank'>TechCrunch</a>, <a href='http://www.businessinsider.com/mapquest-mobile-app-redesign-2013-11' target='_blank'>Business Insider</a>, <a href='http://www.zdnet.com/did-you-mapquest-it-new-ios-7-and-android-update-shows-mapquest-is-serious-about-mobile-7000023209/' target='_blank'>ZDNet</a>, <a href='http://www.pcmag.com/article2/0,2817,2427131,00.asp' target='_blank'>PC Magazine</a>, <a href='http://www.engadget.com/2013/11/14/mapquest-launches-new-apps-for-ios-7-and-android-with-refreshed/' target='_blank'>Engadget</a>, <a href='http://www.fastcompany.com/3021587/fast-feed/mapquest-still-exists-it-has-an-ios-7-app-to-prove-it' target='_blank'>Fast Company</a>, <a href='http://www.tuaw.com/2013/11/14/mapquest-gets-new-look-features-for-ios-7-users/' taget='_blank'>TUAW</a>, and <a href='http://www.slashgear.com/new-mapquest-app-for-android-and-ios-7-gets-customizable-15305519/' target='_blank'>SlashGear</a>."
+        .credit
+          %p= "I worked on the redesigned, rewritten, and reinvisioned MapQuest mobile apps in 2013 as a Product Manager at <a href='http://company.mapquest.com' target='_blank'>MapQuest</a>/<a href='//corp.aol.com' target='_blank'>Aol</a>."
+        .accolades
+          %p= "Within just a month of their November 2013 release, the MapQuest apps received over 4 million downloads."
+
+  #stanley.work
+    .hero
+      .container
+        .title
+          %img{ src: '/assets/images/title-stanley.png' }
+        .icon
+          %img{ src: '/assets/images/icon-stanley.png' }
+        #stanley-slider.swipe
+          .swipe-wrap
+            %div
+              .screenshot-iphone
+                %img{ src: '/assets/images/iphone-stanley-1.png' }
+    .container
+      .about
+        .skills
+          %ul
+            %li.block
+              %p Development
+            %li.block
+              %p Design
+            %li.block
+              %p UX
+        .description
+          %p= "The Stanley Film Festival showcases classic and contemporary horror cinema, set at the historic Stanley Hotel in Estes Park, Colorado. The Stanley Film Fest app serves as a perfect companion for festival attendees."
+        .features
+          %p= "You can find the Stanley Film Festival app on <a href='https://itunes.apple.com/us/app/id618616645?mt=8' target='_blank'>the App Store</a>. You can learn more about the Stanley Film Fest on <a href='//www.stanleyfilmfest.com' target='_blank'>its official site</a>, <a href='//www.nbcnews.com/travel/shining-hotel-site-new-stanley-film-festival-6C9671106' target='_blank'>NBC News</a>, <a href='//www.forbes.com/sites/larryolmsted/2013/04/04/new-horror-film-festival-stephen-kings-upcoming-shining-sequel/' target='_blank'>Forbes</a>, <a href='//www.indiewire.com/article/sundance-for-horror-films-only-the-stanley-film-festival-looks-to-the-future' target='_blank'>Indiewire</a>, and <a href='//www.hollywoodreporter.com/heat-vision/eli-roth-spotlight-at-inaugural-432469' target='_blank'>The Hollywood Reporter</a>."
+        .credit
+          %p= "I worked on the Stanley Film Fest app in 2013 with <a href='//tivona.me' target='_blank'>Devon Tivona</a> while at <a href='//monospacecollective.com' target='_blank'>Monospace</a> as client work for the <a href='//www.grandheritage.com' target='_blank'>Grand Heritage Hotel Group</a>."
+
+  #mapquest-travel-blogs.work
+    .hero
+      .container
+        .title
+          %img{ src: '/assets/images/title-mapquest-travel-blogs.png' }
+        .icon
+          %img{ src: '/assets/images/icon-mapquest-travel-blogs.png' }
+        #mapquest-travel-blogs-slider.swipe
+          .swipe-wrap
+            %div
+              .screenshot-iphone
+                %img{ src: '/assets/images/iphone-mapquest-travel-blogs-1.png' }
+    .container
+      .about
+        .skills
+          %ul
+            %li.block
+              %p Development
+            %li.block
+              %p Design
+            %li.block
+              %p UX
+        .description
+          %p= "MapQuest Travel Blogs are the perfect way to seamlessly capture all of your memories from your journeys. You can easily edit, view, and capture your adventure—online or offline."
+        .features
+          %p= "You can find MapQuest Travel Blogs on <a href='https://itunes.apple.com/us/app/mapquest-travel-blogs/id602353608?mt=8' target='_blank'>the App Store</a> and its <a href='//travelblogs.mapquest.com' target='_blank'>offical site</a>. You can learn more about MapQuest Travel Blogs on <a href='//finance.yahoo.com/news/mapquest-introduces-free-travel-blogs-205300683.html' target='_blank'>Yahoo!</a>, <a href='//thenextweb.com/insider/2013/02/28/mapquest-touts-its-everlater-acquisition-launches-free-travel-blogs-for-the-web-and-ios/' target='_blank'>The Next Web</a>, <a href='//www.tuaw.com/2013/03/11/mapquest-travel-blogs-ios-app-capture-and-share-your-journeys/' target='_blank'>TUAW</a>, and <a href='//blog.aol.com/2013/02/28/mapquest-ecosystem-expands-through-launch-of-travel-blogs/' target='_blank'>the Aol. Blog</a>."
+        .credit
+          %p= "I worked on the MapQuest Travel Blogs app with <a href='//tivona.me' target='_blank'>Devon Tivona</a> and the <a href='//company.mapquest.com/careers/' target='_blank'>MapQuest Mobile Team</a> in 2012 and 2013 while at <a href='//monospacecollective.com' target='_blank'>Monospace</a> as client work for <a href='http://company.mapquest.com' target='_blank'>MapQuest</a>/<a href='//corp.aol.com' target='_blank'>Aol</a>."
+        .footnote
+          %p= "The MapQuest Travel Blogs app was originally the Everlater Travel Blogs app, written during my time at <a href='//everlater.com' target='_blank'>Everlater Inc.</a> from 2011–2012. Everlater was acquired by MapQuest/Aol. in 2012 and the Everlater app was subsequently integrated into MapQuest as the MapQuest Travel Blogs app."
+
+  #erudio.work
+    .hero
+      .container
+        .title
+          %img{ src: '/assets/images/title-erudio.png' }
+        .icon
+          %img{ src: '/assets/images/icon-erudio.png' }
+        #erudio-slider.swipe
+          .swipe-wrap
+            %div
+              .screenshot-iphone
+                %img{ src: '/assets/images/iphone-erudio-1.png' }
+    .container
+      .about
+        .skills
+          %ul
+            %li.block
+              %p Development
+            %li.block
+              %p Design
+            %li.block
+              %p UX
+            %li.block
+              %p Branding
+            %li.block
+              %p Marketing
+        .description
+          %p= "Erudio effortlessly and intuitively organizes the chaos of classes, assignments, readings, grades, and exams that students face every day."
+        .features
+          %p= "You can find Erudio on <a href='https://itunes.apple.com/us/app/erudio/id515879580?ls=1&mt=8' target='_blank'>the App Store</a> and its <a href='//erudio.monospacecollective.com' target='_blank'>official site</a>."
+        .credit
+          %p= "I worked on Erudio with <a href='//tivona.me' target='_blank'>Devon Tivona</a> in 2012 and 2013 while at <a href='//monospacecollective.com' target='_blank'>Monospace</a>"
+
+  #growlvoice.work
+    .hero
+      .container
+        .title
+          %img{ src: '/assets/images/title-growlvoice.png' }
+        .icon
+          %img{ src: '/assets/images/icon-growlvoice.png' }
+        #growlvoice-slider.swipe
+          .swipe-wrap
+            %div
+              .screenshot-mac
+                %img{ src: '/assets/images/mac-growlvoice-1.png' }
+    .container
+      .about
+        .skills
+          %ul
+            %li.block
+              %p Development
+            %li.block
+              %p Design
+            %li.block
+              %p UX
+            %li.block
+              %p Branding
+            %li.block
+              %p Marketing
+        .description
+          %p= "GrowlVoice is an intuitive and fully-featured Google Voice client that brings the power of Google Voice to your Mac's menu bar."
+        .features
+          %p= "You can find GrowlVoice on its <a href='//growlvoice.com' target='_blank'>official site</a>. You can learn more about GrowlVoice on <a href='//lifehacker.com/5897381/growlvoice-puts-google-voice-in-your-macs-menubar' target='_blank'>Lifehacker</a>, <a href='//thenextweb.com/apps/2012/03/28/growlvoice-is-a-handy-full-featured-google-voice-app-for-mac/' target='_blank'>The Next Web</a>, <a href='//www.macworld.com/article/1162040/growlvoice_gem.html' target='_blank'>MacWorld</a>, and <a href='//mac.appstorm.net/reviews/communication-review/growlvoice-use-google-voice-from-your-menubar/' target='_blank'>App Storm</a>."
+        .credit
+          %p= "I worked on GrowlVoice as a personal side project from 2010 to 2012 while I was at college. The icon was both designed and generously donated by <a href='//dribbble.com/shots/305900-GrowlVoice-Icon' target='_blank'>TJ Kohli</a>."
+        .accolades
+          %p= "GrowlVoice ranked as high as <a href='http://www.appannie.com/apps/mac/app/413146256/rank-history/'>top 15</a> on the overall paid Mac App Store charts. It has sold over 20,000 copies since its release in early 2011."
+        .footnote
+          %p= "Google revoked GrowlVoice's access to Google Voice in April of 2014 as part of their <a href='http://www.theverge.com/2013/10/31/5052808/google-voice-to-deny-access-to-third-party-apps-next-year' target='_blank'>integration of Google Voice into Hangouts</a>. As such, GrowlVoice has been <a href='https://twitter.com/GrowlVoice/status/455931023868448768' target='_blank'>officially discontinued</a> and is no longer available on the Mac App Store."
+
+#libraries
+
+  .container
+    .header
+      %p= "I publish open source libraries for iOS when I get the chance."
+    - if Repos.all
+      - Repos.all.each do |repo|
+        .library
+          .name
+            %a{ href: repo["html_url"], target: '_blank' }= repo["name"]
+          .stargazers
+            %i.ss-icon star
+            %p= repo["watchers"]
+          .forks
+            %i.ss-icon fork
+            %p= repo["forks"]
+          .description
+            %p= repo["description"]
+
+.container
+  .footer
+    %p= "© 2014 Eric Horacek. All rights reserved."

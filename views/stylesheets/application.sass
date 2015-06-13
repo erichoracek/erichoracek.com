@@ -1,0 +1,38 @@
+$web: 960px
+$tablet: 768px
+$phone: 568px
+
+// Bourbon neat grid
+// $visual-grid: true
+
+@import "bourbon/bourbon"
+@import "neat/neat"
+@import "swipe"
+@import "home"
+@import "dropdown"
+
+html, body
+  padding: 0
+  margin: 0
+
+body
+  font-family: "Avenir", "Helvetica", "Arial", "Sans-Serif"
+  text-align: center
+  font-weight: 200
+
+a
+  text-decoration: none
+  border-bottom: 1px solid transparent
+  @include transition (border 0.2s ease-in-out)
+  &:hover
+    border-bottom: 1px solid
+
+a, a:active, a:visited
+  color: #3498db
+
+body
+  background: #ffffff
+
+// Bourbon Neat Container
+.container
+  @include outer-container

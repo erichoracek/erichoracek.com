@@ -1,0 +1,76 @@
+.dropdown
+  width: 100%
+  position: relative
+
+.dropdown-menu
+  list-style: none
+  position: absolute
+  left: 0
+  right: 0
+  z-index: 1000
+  // Transition
+  @include transition(.15s ease-out)
+  @include transition-property(opacity, transform, visibility)
+  @include transform(scale(0.8) translateY(-20px))
+  opacity: 0
+  visibility: hidden
+  // Styling
+  margin-top: 24px
+  padding: 10px
+  background: white
+  border-radius: 5px
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.5)
+
+  > li
+    padding: 0 12px
+
+    a
+      display: block
+      position: relative
+      text-align: left
+      margin: 6px -13px 6px -13px
+      padding: 6px 20px 6px 12px
+      line-height: 1.3
+      text-decoration: none
+      border-bottom: none
+      border-radius: 3px
+      &:hover
+        color: white
+
+  li:first-child
+    a
+      margin-top: 0px
+  
+  li:last-child
+    a
+      margin-bottom: 0px
+
+  &:before // Triangle
+    @include transform(scaleX(1.5))
+    font-size: 22px
+    content: "▲"
+    color: white
+    background: transparent
+    position: absolute
+    top: -18px
+    left: 50%
+    margin-left: -10px
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.5)
+
+  &:after // Triangle shadow blocker
+    background-color: white
+    position: absolute
+    content: ""
+    width: 50px
+    height: 10px
+    top: 0px
+    left: 50%
+    margin-left: -20px
+
+.open 
+  > .dropdown-menu
+    @include transform(scale(1) translateY(0px))
+    opacity: 1
+    visibility: visible
+  > a
+    outline: 0 // Remove the outline when :focus is triggered
