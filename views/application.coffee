@@ -1,5 +1,4 @@
-$ -> 
-
+$ ->
   apps = ['mapquest', 'stanley', 'mapquest-travel-blogs', 'erudio', 'growlvoice']
   contacts = ['email', 'facebook', 'dribbble', 'instagram', 'github', 'twitter']
 
@@ -21,20 +20,20 @@ $ ->
     curveX = (t) ->
       v = 1 - t
       3 * v * v * t * x1 + 3 * v * t * t * x2 + t * t * t
-  
+
     curveY = (t) ->
       v = 1 - t
       3 * v * v * t * y1 + 3 * v * t * t * y2 + t * t * t
-  
+
     derivativeCurveX = (t) ->
       v = 1 - t
       3 * (2 * (t - 1) * t + v * v) * x1 + 3 * (-t * t * t + 2 * v * t) * x2
-  
+
     cache = {}
     cachingInterval = 0.001
     invertCachingInterval = 1 / cachingInterval
     i = 0
-  
+
     while i <= invertCachingInterval
       t = curveX(i * cachingInterval)
       closestCachedT = Math.round(t / cachingInterval)
@@ -55,7 +54,7 @@ $ ->
           incr = -2 * incr
         y = cache[t]
       y
-    
+
     (t, precision) ->
       y = findCachedValueAround(t, precision)
       unless y
@@ -74,7 +73,7 @@ $ ->
             t1 = t2
           t2 = (t1 - t0) * .5 + t0
         cache[Math.round(t / cachingInterval)] = y
-      
+
       return y
 
   easeOutFunction = bezierCurve(.645, .045, .355, 1)
@@ -97,7 +96,7 @@ $ ->
     precision = 1 / 240 / (duration / 1000)
     if from != to
       requestAnimationFrame scroll
-    else 
+    else
       requestAnimationFrame completion
   (->
     requestAnimationFrame = window.requestAnimationFrame or window.mozRequestAnimationFrame or window.webkitRequestAnimationFrame or window.msRequestAnimationFrame
