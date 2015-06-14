@@ -1,7 +1,7 @@
 @import "bourbon/addons/retina-image"
 
 // Name, App Color, Foreground Text Color, Link Color, Hero Background Color
-$apps: mapquest #84db5b #202020 darken(#84db5b, 15%) "light", stanley #A10000 #FFFFFF #A10000 "dark", mapquest-travel-blogs #8EC64A #202020 darken(#8EC64A, 15%) "dark", erudio #9E1D23 #FFFFFF #9E1D23 "light", growlvoice #426ED0 #FFFFFF #426ED0 "light"
+$apps: automatic #50b6ee #FFFFFF darken(#50b6ee, 15%) "light", mapquest #84db5b #202020 darken(#84db5b, 15%) "light", stanley #A10000 #FFFFFF #A10000 "dark", mapquest-travel-blogs #8EC64A #202020 darken(#8EC64A, 15%) "dark", erudio #9E1D23 #FFFFFF #9E1D23 "light", growlvoice #426ED0 #FFFFFF #426ED0 "light"
 
 // Name, Color
 $contacts: email #383838, facebook #3B5998, dribbble #EA4C89, instagram #3f729B, github lighten(#171515, 15%), twitter #00ACEE
@@ -11,7 +11,7 @@ $contacts: email #383838, facebook #3B5998, dribbble #EA4C89, instagram #3f729B,
     color: $text-color
     background-color: $token-color
     padding: 5px 0
-    font-weight: 500
+    font-weight: 300
 
 @mixin colored-popover-hover($token-color: #AAAAAA, $text-color: #FFFFFF)
   color: $text-color
@@ -28,12 +28,10 @@ $contacts: email #383838, facebook #3B5998, dribbble #EA4C89, instagram #3f729B,
   @if $style == "dark"
     background-color: #202020
     // @include retina-image("/assets/images/hero-background-dark", 1088px 650px)
-    @include top-bottom-inner-shadow(30px, hsla(0, 0%, 0%, 1.0))
   @else if $style == "light"
     // background-color: #E0E0E0
     background-color: #E5E5E5
     // @include retina-image("/assets/images/hero-background-light", 1088px 650px)
-    @include top-bottom-inner-shadow(30px, hsla(0, 0%, 0%, 0.5))
 
 .navigation
   @include span-columns(10)
