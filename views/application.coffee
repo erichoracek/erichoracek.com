@@ -1,5 +1,5 @@
 $ ->
-  apps = ['mapquest', 'stanley', 'mapquest-travel-blogs', 'erudio', 'growlvoice']
+  apps = ['automatic', 'mapquest', 'stanley', 'mapquest-travel-blogs', 'erudio', 'growlvoice']
   contacts = ['email', 'facebook', 'dribbble', 'instagram', 'github', 'twitter']
 
   window.swipes = for app in apps
