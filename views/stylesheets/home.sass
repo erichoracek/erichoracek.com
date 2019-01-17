@@ -6,13 +6,6 @@ $apps: automatic #50b6ee #FFFFFF darken(#50b6ee, 15%) "light", mapquest #84db5b 
 // Name, Color
 $contacts: email #383838, dribbble #EA4C89, github lighten(#171515, 15%), twitter #00ACEE, medium #282828
 
-@mixin colored-token($token-color: #999999, $text-color: #FFFFFF)
-  p
-    color: $text-color
-    background-color: $token-color
-    padding: 5px 0
-    font-weight: 300
-
 @mixin colored-popover-hover($token-color: #AAAAAA, $text-color: #FFFFFF)
   color: $text-color
   background-color: $token-color
@@ -175,8 +168,6 @@ $contacts: email #383838, dribbble #EA4C89, github lighten(#171515, 15%), twitte
       color: nth($app, 4)
     .hero
       @include hero-background-style(nth($app, 5))
-    .skills
-      @include colored-token(nth($app, 2), nth($app, 3))
 
 .about
   @include span-columns(12)
@@ -203,21 +194,6 @@ $contacts: email #383838, dribbble #EA4C89, github lighten(#171515, 15%), twitte
     @include media(max-width $phone)
       @include span-columns(10)
       @include shift(1)
-
-  .skills
-    margin-bottom: 14px
-    font-size: 23px
-    p
-      white-space: nowrap
-      overflow: hidden
-      text-overflow: ellipsis
-      margin-top: 0px
-      margin-bottom: 15px
-      padding: 4px 0px
-      text-align: center
-      border-radius: 8px
-    @include media(max-width $phone)
-      font-size: 20px
 
   li.block
     text-align: left
