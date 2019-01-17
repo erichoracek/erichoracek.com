@@ -1,6 +1,6 @@
 $ ->
   apps = ['automatic', 'mapquest', 'stanley', 'mapquest-travel-blogs', 'erudio', 'growlvoice']
-  contacts = ['email', 'facebook', 'dribbble', 'instagram', 'github', 'twitter']
+  contacts = ['email', 'dribbble', 'github', 'twitter']
 
   window.swipes = for app in apps
     Swipe(document.getElementById("#{app}-slider"))
