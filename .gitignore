@@ -13,3 +13,4 @@ log/*
 # Bundler
 vendor/
 bin/
+.bundle/
