@@ -37,12 +37,6 @@ get '/application.css' do
   sass :'stylesheets/application'
 end
 
-# Scripts
-get "/application.js" do
-  content_type "text/javascript"
-  coffee :application
-end
-
 get '/' do
   haml :home, layout: :layout
 end

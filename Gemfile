@@ -5,7 +5,6 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'haml'
 gem 'sass'
-gem 'coffee-script'
 gem 'bourbon'
 gem 'neat'
 gem 'github_api'
