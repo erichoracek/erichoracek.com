@@ -5,7 +5,6 @@ require 'sass'
 require 'haml'
 require 'memcachier'
 require 'newrelic_rpm'
-require 'rack-google-analytics'
 require './repos'
 
 configure do
@@ -13,9 +12,6 @@ configure do
   Dir.mkdir('log') unless File.exist?('log')
   log = File.new("log/sinatra.log", "a")
   STDOUT.reopen(log)
-
-  # Google Analytics
-  use Rack::GoogleAnalytics, :tracker => 'UA-15242931-2'
 
   # Memcache
   set :cache, Dalli::Client.new
